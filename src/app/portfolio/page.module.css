@@ -2,8 +2,7 @@
   font-size: 100px;
 }
 
-.container {
-}
+.container {}
 
 .selectTitle {
   margin: 20px 0px;
@@ -20,17 +19,37 @@
   width: 300px;
   height: 400px;
   position: relative;
-  background-size: cover !important;
+  overflow: hidden;
 }
 
-.item:nth-child(1) {
-  background: url("/illustration.png");
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center;
+  transition: all 0.5s ease;
+  filter: grayscale(70%);
 }
-.item:nth-child(2) {
+
+.item:hover::before {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.item:nth-child(1)::before {
+  background: url("/videos.jpg");
+}
+
+.item:nth-child(2)::before {
   background: url("/websites.jpg");
 }
-.item:nth-child(3) {
-  background: url("/apps.jpg");
+
+.item:nth-child(3)::before {
+  background: url("/educations.jpg");
 }
 
 .title {

@@ -11,7 +11,7 @@ export const metadata = {
 const Contact = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Let's Keep in Touch</h1>
+      <h1 className={styles.title}>언제든지 편하게 연락해 주세요.</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
@@ -26,11 +26,11 @@ const Contact = () => {
           <input type="text" placeholder="email" className={styles.input} />
           <textarea
             className={styles.textArea}
-            placeholder="message"
+            placeholder="메시지를 남겨주세요..."
             cols="30"
             rows="10"
           ></textarea>
-          <Button url="#" text="Send"/>
+          <Button url="#" text="Send" />
         </form>
       </div>
     </div>

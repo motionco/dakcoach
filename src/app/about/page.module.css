@@ -1,5 +1,4 @@
-.container {
-}
+.container {}
 
 .imgContainer {
   width: 100%;
@@ -33,6 +32,13 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.subtitle {
+  font-weight: 700;
+  color: #53C28B;
+  text-align: justify;
+}
+
 
 .desc {
   font-size: 18px;
