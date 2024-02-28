@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
-        Dakcoach
+      Multimedia Production Studio
       </Link>
       <div className={styles.links}>
         <DarkModeToggle />
