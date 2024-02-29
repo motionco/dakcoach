@@ -7,7 +7,7 @@ import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
 const notoSans = Noto_Sans_KR({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '700'],
   display: 'swap',
 });
 
