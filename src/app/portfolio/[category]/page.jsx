@@ -37,17 +37,11 @@ const Category = ({ params }) => {
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>
             <p className={styles.desc}>{item.desc}</p>
-            {/* <button
-              className={`${styles.button} ${showVideo[item.id] ? 'close' : ''}`}
-              onClick={() => handleClick(item.id)}
-            >
-              {showVideo[item.id] ? 'Close Sample' : 'View Sample'}
-            </button> */}
             <button
               className={`${styles.button} ${showVideo[item.id] ? styles.close : ''}`}
               onClick={() => handleClick(item.id)}
             >
-              {showVideo[item.id] ? 'Close Sample' : 'View Sample'}
+              {showVideo[item.id] ? 'Hide Sample' : 'View Sample'}
             </button>
 
             {/* <button className={styles.button} onClick={() => handleClick(item.id)}>{showVideo[item.id] ? 'Close Sample' : 'View Sample'}</button> */}

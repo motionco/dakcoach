@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import sanitizeHtml from 'sanitize-html';
 
 async function getData(id) {
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
@@ -26,7 +27,16 @@ export async function generateMetadata({ params }) {
 }
 
 const BlogPost = async ({ params }) => {
-  const data = await getData(params.id);
+  let data = await getData(params.id);
+
+  data = {
+    ...data,
+    title: sanitizeHtml(data.title),
+    desc: sanitizeHtml(data.desc),
+    img: sanitizeHtml(data.img),
+    content: sanitizeHtml(data.content),
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -56,9 +66,7 @@ const BlogPost = async ({ params }) => {
         </div>
       </div>
       <div className={styles.content}>
-        <p className={styles.text}>
-          {data.content}
-        </p>
+        <p className={styles.text} dangerouslySetInnerHTML={{ __html: data.content }} />
       </div>
     </div>
   );

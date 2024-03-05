@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import connect from "@/utils/db";
 import Post from "@/models/Post";
+import sanitizeHtml from 'sanitize-html';
 
 export const GET = async (request, { params }) => {
   const { id } = params;
@@ -9,6 +10,12 @@ export const GET = async (request, { params }) => {
     await connect();
 
     const post = await Post.findById(id);
+
+    // post의 필드를 클리닝
+    post.title = sanitizeHtml(post.title);
+    post.desc = sanitizeHtml(post.desc);
+    post.img = sanitizeHtml(post.img);
+    post.content = sanitizeHtml(post.content);
 
     return new NextResponse(JSON.stringify(post), { status: 200 });
   } catch (err) {

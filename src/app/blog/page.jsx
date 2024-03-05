@@ -6,6 +6,7 @@ import Image from "next/image";
 async function getData() {
   const res = await fetch("http://localhost:3000/api/posts", {
     cache: "no-store",
+    // next: {revalidate:60}
   });
 
   if (!res.ok) {
@@ -13,6 +14,9 @@ async function getData() {
   }
 
   return res.json();
+
+  // const data = await res.json();
+  // return data.reverse();
 }
 
 const Blog = async () => {
