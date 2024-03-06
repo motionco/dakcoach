@@ -9,6 +9,7 @@ async function getData() {
     // next: {revalidate:60}
   });
 
+
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
