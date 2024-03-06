@@ -11,7 +11,7 @@ export const metadata = {
 const Contact = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>언제든지 편하게 연락해 주세요.</h1>
+      <h1 className={styles.title}>궁금한 사항이나 제안하실 것이 있다면 연락주세요.</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image

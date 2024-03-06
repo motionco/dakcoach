@@ -1,8 +1,7 @@
-.container {
-}
+.container {}
 
 .title {
-  font-size: 60px;
+  font-size: 48px;
   margin-bottom: 100px;
   text-align: center;
 }
@@ -28,6 +27,7 @@
   from {
     transform: translateY(-15px);
   }
+
   to {
     transform: translateY(0px) scale(1.03);
   }

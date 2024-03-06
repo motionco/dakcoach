@@ -16,7 +16,7 @@ const Imgbar = () => {
         <div className={styles.imgText}>
           <h1 className={styles.imgTitle}>Journey to the Dream</h1>
           <h2 className={styles.imgDesc}>
-            콘텐츠 제작의 노하우, 꿈을 향한 여정을 저와 함께 시작하세요!
+            미디어 제작의 노하우, 꿈을 향한 여정을 닥코치와 함께 시작하세요!
           </h2>
         </div>
       </div>
