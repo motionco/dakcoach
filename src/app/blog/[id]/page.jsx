@@ -14,6 +14,7 @@ async function getData(id) {
   );
 
 
+
   if (!res.ok) {
     return notFound()
   }
