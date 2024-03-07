@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import sanitizeHtml from 'sanitize-html';
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 async function getData(id) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/${id}`
@@ -52,7 +52,7 @@ const BlogPost = async ({ params }) => {
           </p>
           <div className={styles.author}>
             <Image
-              src={data.img}
+              src={data.image}
               alt=""
               width={40}
               height={40}
@@ -66,7 +66,7 @@ const BlogPost = async ({ params }) => {
             src={data.img}
             alt=""
             fill={true}
-            className={styles.image}
+            className={styles.img}
           />
         </div>
       </div>
