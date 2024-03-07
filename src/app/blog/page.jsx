@@ -3,11 +3,15 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
-    cache: "no-store",
-    // next: {revalidate:60}
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`
+    // , {
+    //   cache: "no-store",
+    //   // next: {revalidate:60}
+    // }
+  );
 
 
   if (!res.ok) {
