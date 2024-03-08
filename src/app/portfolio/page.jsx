@@ -9,7 +9,6 @@ const Portfolio = () => {
       <Imgbar />
       <div className={styles.container}>
         <h1 className={styles.mainTitle}>My Works & Portfolio</h1>
-        {/* <h className={styles.selectTitle}>원하는 갤러리를 선택하세요</h> */}
         <div className={styles.items}>
           <Link href="/portfolio/videos" className={styles.item}>
             <span className={styles.title}>Videos</span>

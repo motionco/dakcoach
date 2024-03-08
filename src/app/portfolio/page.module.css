@@ -72,3 +72,10 @@
 .item:hover .title {
   color: #53c28b;
 }
+
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
