@@ -7,6 +7,9 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import sanitizeHtml from 'sanitize-html';
 
+
+const placeholder = 'https://images.unsplash.com/photo-1645821522741-2a6b96991657?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+
 const Dashboard = () => {
 
   const session = useSession();
@@ -32,7 +35,7 @@ const Dashboard = () => {
     e.preventDefault();
     let title = e.target[0].value;
     let desc = e.target[1].value;
-    let img = e.target[2].value;
+    let img = e.target[2].value || placeholder;
     let content = e.target[3].value;
 
     title = sanitizeHtml(title);
