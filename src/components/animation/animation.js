@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Lottie from 'react-lottie-player'
+import styles from "./animation.module.css";
 
 import lottieJson from '/public/animation.json'
 
@@ -10,7 +11,8 @@ export default function Animation() {
             loop
             animationData={lottieJson}
             play
-            style={{ width: 600, height: 600 }}
+            className={styles.ani}
+        // style={{ width: 500, height: 500 }}
         />
     )
 }

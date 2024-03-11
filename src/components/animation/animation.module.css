@@ -1,0 +1,11 @@
+.ani {
+    width: 500px;
+    height: 500px;
+}
+
+@media (max-width: 768px) {
+    .ani {
+        width: 400px;
+        height: 400px;
+    }
+}
