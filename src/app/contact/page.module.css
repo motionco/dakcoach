@@ -9,14 +9,13 @@
 .content {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 100px;
 }
 
 .imgContainer {
   flex: 1;
-  position: relative;
   height: 500px;
-  min-width: 300px;
+  position: relative;
 }
 
 .image {
@@ -51,32 +50,4 @@
   border: 3px solid #bbb;
   font-size: 20px;
   font-weight: bold;
-}
-
-.button {
-  padding: 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  background-color: #53c28b;
-  border: none;
-  border-radius: 5px;
-  /* width: max-content; */
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-
-  }
-
-  .imgContainer {
-    flex: 1;
-    width: 100%;
-    /* 너비를 100%로 설정하여 부모 컨테이너에 맞도록 조정 */
-    height: 300px;
-
-    /* 높이를 auto로 설정하여 이미지 비율에 맞게 조정 */
-
-  }
 }

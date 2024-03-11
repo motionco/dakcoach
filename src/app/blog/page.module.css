@@ -5,24 +5,18 @@
   margin-bottom: 50px;
 }
 
-.image {
+.image{
   object-fit: cover;
 }
 
-.content {}
+.content {
+}
 
-.title {
+.title{
   margin-bottom: 10px;
 }
 
-.desc {
+.desc{
   font-size: 18px;
   color: #999;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
