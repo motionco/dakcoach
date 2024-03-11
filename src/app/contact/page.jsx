@@ -4,8 +4,8 @@ import Image from "next/image";
 import Button from "@/components/Button/Button";
 
 export const metadata = {
-  title: "Lama Dev Contact Information",
-  description: "This is Contact Page",
+  title: "닥코치 연락 문의",
+  description: "닥코치에게 문의 제안사항을 남겨주세요",
 };
 
 const Contact = () => {
