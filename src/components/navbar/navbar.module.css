@@ -24,3 +24,90 @@
   cursor: pointer;
   border-radius: 3px;
 }
+
+/* 햄버거 메뉴 스타일 */
+.hamburger {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  display: none;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #194c33;
+
+}
+
+/* X표시 스타일 */
+.hamburger.active div {
+  background-color: #194c33;
+  transition: all .3s ease;
+  /* X표시 색상 조정 */
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 햄버거 메뉴 상태로 돌아갈 때의 스타일 */
+
+/* X표시 스타일 */
+.hamburger:not(.active) div {
+  background-color: #194c33;
+  transition: all .3s ease;
+  /* X표시 색상 조정 */
+}
+
+.hamburger:not(.active) div:nth-child(1) {
+  transform: rotate(0) translate(0, 0);
+}
+
+.hamburger:not(.active) div:nth-child(2) {
+  opacity: 1;
+}
+
+.hamburger:not(.active) div:nth-child(3) {
+  transform: rotate(0) translate(0, 0);
+}
+
+/* 기존 CSS에 추가 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    display: none;
+  }
+
+  .links.active {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #194c33;
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 36px;
+    z-index: 999;
+  }
+
+}

@@ -45,3 +45,10 @@
   font-weight: 300;
   text-align: justify;
 }
+
+@media (max-width: 768px) {
+  .textContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
